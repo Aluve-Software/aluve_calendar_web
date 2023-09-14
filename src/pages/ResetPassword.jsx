@@ -3,6 +3,14 @@ import '../index.css';
 
 export default function ResetPassword() {
 
+
+    // submit functionality
+    function handleSubmit(e) {
+        e.preventDefault();
+
+        
+    }
+
     return (
         <>
             <div className="relative">
@@ -31,7 +39,11 @@ export default function ResetPassword() {
                             <input type="email" id="email" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 " placeholder="john.doe@company.com" required />                    
                         </div> 
 
-                        <button type="button" className="w-full px-5 py-2.5 text-sm font-medium text-white bg-blue-600 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg text-center ">SUBMIT</button>
+                        <button 
+                            type="button" 
+                            onClick={handleSubmit}
+                            className="w-full px-5 py-2.5 text-sm font-medium text-white bg-blue-600 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg text-center "
+                            >SUBMIT</button>
                         </form>
 
 
