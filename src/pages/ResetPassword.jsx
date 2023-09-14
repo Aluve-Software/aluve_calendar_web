@@ -1,14 +1,42 @@
 // import aluveLogo from '../assets/aluve_monochrome_black.png';
+import { useState } from 'react'
 import '../index.css';
 
 export default function ResetPassword() {
+    // store user input and success/error messages
+    const [email, setEmail] = useState('');
+    const [message, setMessage] = useState('');
+    const [error, setError] = useState('')
+
 
 
     // submit functionality
-    function handleSubmit(e) {
+    async function handleSubmit(e) {
         e.preventDefault();
 
-        
+        try{
+            // send request to /reset endpoint with the user's email
+            const resetResponse = await fetch(`https://resetpassword.free.beeceptor.com/reset`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ email }),
+            });
+    
+            if (resetResponse.status === 200) {
+                // if the email request is successful, show a message to the user
+                setMessage('Password reset email sent. Check your email for reset instructions.');
+                setError('');
+            } else {
+                // if there is an error, display error message
+                setError('Failed to send reset email. Please try again later (or make sure you are registered?)');
+                setMessage('');
+            }
+        }   catch (error) {
+            setError(`Oops! It looks like you're not registered. `);
+            setMessage('')
+        }
     }
 
     return (
@@ -36,7 +64,15 @@ export default function ResetPassword() {
                             <p className="pt-8">Email:</p>
                             <label htmlFor="email" className="block mb-2 text-sm font-medium text-white">Email address</label>
 
-                            <input type="email" id="email" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 " placeholder="john.doe@company.com" required />                    
+                            <input 
+                                type="email" 
+                                id="email" 
+                                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 " 
+                                placeholder="john.doe@company.com" 
+                                required 
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
+                            />                    
                         </div> 
 
                         <button 
@@ -45,6 +81,8 @@ export default function ResetPassword() {
                             className="w-full px-5 py-2.5 text-sm font-medium text-white bg-blue-600 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg text-center "
                             >SUBMIT</button>
                         </form>
+                        {message && <p className="text-green-500 text-center">{message}</p>}
+                        {error && <p className="text-red-500 text-center">{error}</p>}
 
 
                         <div className="text-black text-sm text-center pt-5">Return to <a href="#" className="text-sm hover:text-blue-700">Login</a></div>
