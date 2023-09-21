@@ -25,7 +25,7 @@ export default function Landing() {
                         </div>
                         
                         <div className='relative -top-3/4  left-3/4  inset-1/4'>
-                           <img src={ timeImgBlack } width={"800px"}  alt="time image black" /> 
+                           <img src={ timeImgBlack } width={"700px"}  alt="time image black" /> 
                         </div>
                         
                     </div>
