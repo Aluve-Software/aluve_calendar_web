@@ -1,32 +1,38 @@
 import aluveLogo from '../assets/aluve_monochrome_black.png';
+import timeImgBlack from '../assets/timeImgBlack.svg';
 import '../index.css';
 
 export default function Landing() {
    
     return (
         <>
-            <div className="relative h-screen ">
-                <div className="display flex flex-col bg-white justify-center w-full h-screen sm:flex-row md">
-                    <div className='bg-pink-400 w-full'>
-                        <h2>
-                            Load shedding impacting your team’s productivity?
-                        </h2>
+            <div className="relative h-screen overflow-hidden">
+                <div className="display flex flex-col bg-white justify-center w-full h-screen sm:flex-row ">
+                    <div className='bg-lilac w-full flex-grow py-24 pl-32 pr-80 text-left text-white'>
+                        <div className=''>
+                        <p className='text-6xl font-bold  '>
+                            Load shedding impacting your  <br/> team’s<br/> productivity?
+                        </p>
 
-                        <span>
-                            This can be some info that tells the user a little bit about what the app can do for them. 
-                            Sells makes them excited to sign up. Bla bla.
-                        </span>
+                        <p className='text-2xl pt-16 pr-48 leading-none'>
+                            Find the best time to collaborate with your team. Schedule a meeting. Send messages, plus more. <br/>Ready?
+                        </p>
 
-                        <div className='display flex row justify-space-around w-full'>
-                            <button>Sign In</button>
-                            <button>Register</button>
+                        <div className='display flex row justify-space-around w-full gap-6 text-2xl pt-16'>
+                            <button className='px-10 py-2 rounded bg-dark-blue'>Sign In</button>
+                            <button className='px-10 py-2 rounded bg-light-blue'>Register</button>
+                        </div>
                         </div>
                         
-                        <span>image</span>
+                        <div className='relative -top-3/4  left-3/4  inset-1/4'>
+                           <img src={ timeImgBlack } width={"800px"}  alt="time image black" /> 
+                        </div>
+                        
                     </div>
 
-                    <div className='bg-blue-400 w-full max-w-md sm:mx-full'>
-                    <img src={ aluveLogo } width={"300px"}  alt="aluve logo" />
+                    {/* FIX: top and bottom left border radius needs to be applied */}
+                    <div className='bg-white w-full max-w-md sm:w-1/2 flex-grow rounded-border'>
+                        <img src={ aluveLogo } width={"300px"}  alt="aluve logo" />
                     </div>
                 </div>
 
