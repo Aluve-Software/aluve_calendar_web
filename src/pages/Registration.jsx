@@ -28,15 +28,15 @@ export default function Registration() {
                             
 
                             {/* Link buttons to actions and pages */}
-                            <div className='flex flex-col items-center gap-5 lg:flex-row md:flex-row justify-center w-full  lg:text-2xl text-sm md:text-xl font-bold py-4 lg:pt-16 md:pt-8'>
+                            <div className='flex flex-col items-center gap-4 lg:flex-row md:flex-row justify-center w-full  lg:text-2xl text-sm md:text-xl font-bold py-4 lg:pt-16 md:pt-8'>
                                 <button className='w-full lg:px-10 py-2 md:px-5 rounded-lg md:rounded lg:rounded bg-light-blue text-white'>Register With Email</button>
                                 <button className='w-full lg:px-10 py-2 md:px-5 rounded-lg md:rounded lg:rounded border-2 border-bright-orange text-bright-orange'>Register With Google</button>
-                                <button className='w-full lg:px-10 py-2 md:px-5 rounded-lg md:rounded lg:rounded bg-light-blue text-white'>Register With Facebook</button>
+                                <button className='w-full lg:px-10 py-2 md:px-5 rounded-lg md:rounded lg:rounded border-2 border-light-blue text-light-blue'>Register With Facebook</button>
                             </div>
 
                             {/* ADD functionality to redirect to sign in page */}
                             <p className='text-sm font-medium text-gray-400'>
-                                Already have an account? <span className='text-blue-500 hover:underline cursor-pointer' onClick={() => {}}>Sign in.</span>
+                                Already have an account? <span className='text-light-blue hover:underline cursor-pointer' onClick={() => {}}>Sign in.</span>
                             </p>
                         </div>
                         
