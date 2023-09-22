@@ -15,8 +15,8 @@ export default function Landing() {
            
             
         </div>
-            <div className='lg:hidden md:hidden '>
-                <img src={ timeImgWhite } className='lg:hidden md:hidden w-3/4 mx-auto relative -top-24  ' alt="time image white" />
+            <div className='lg:hidden flex-grow h-24'>
+                <img src={ timeImgWhite } className='lg:hidden md:hidden w-3/4 mx-auto relative -top-28  ' alt="time image white" />
             </div>
         
 
