@@ -12,7 +12,8 @@ export default function Registration() {
             <div className="relative min-h-screen lg:overflow-hidden overflow-visible justify-center">
                 <div className="display flex flex-col bg-white justify-center w-full min-h-screen sm:flex-row flex-grow">
                     <div className='display flex row justify-center items-center align-top bg-lilac lg:bg-white md:bg-white w-full max-w-md sm:w-full flex-grow lg:rounded-border lg:order-2 md:order-2 pb-16  md:pb-0 lg:pb-0'>
-                        <img src={backArrow } className='pl-6' alt="back arrow" />
+                        {/* ADD functionality to back button */}
+                        <img src={backArrow } className='pl-6' onClick={() => window.history.back()} alt="back arrow" />
                         <img src={ aluveLogo } className='lg:w-3/4 md:w-3/4 w-1/2 mx-auto' alt="aluve logo" />
                     </div>
 
@@ -33,7 +34,10 @@ export default function Registration() {
                                 <button className='w-full lg:px-10 py-2 md:px-5 rounded-lg md:rounded lg:rounded bg-light-blue text-white'>Register With Facebook</button>
                             </div>
 
-                            <p className='text-sm font-medium text-gray-400'>Already have an account? Sign in.</p>
+                            {/* ADD functionality to redirect to sign in page */}
+                            <p className='text-sm font-medium text-gray-400'>
+                                Already have an account? <span className='text-blue-500 hover:underline cursor-pointer' onClick={() => {}}>Sign in.</span>
+                            </p>
                         </div>
                         
                         <div className='relative lg:-top-96 inset-full md:-top-64 md:inset-full md:left-full'>
