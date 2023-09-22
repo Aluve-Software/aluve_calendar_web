@@ -1,16 +1,18 @@
+import backArrow from '../assets/backArrow.svg';
 import aluveLogo from '../assets/aluve_monochrome_black.png';
 import timeImgBlack from '../assets/timeImgBlack.svg';
 import timeImgWhite from '../assets/timeImgWhite.svg';
 import '../index.css';
 
-export default function Landing() {
+export default function Registration() {
    
     return (
         <>
             {/* FIX: class arrangement and legibility */}
             <div className="relative min-h-screen lg:overflow-hidden overflow-visible justify-center">
                 <div className="display flex flex-col bg-white justify-center w-full min-h-screen sm:flex-row flex-grow">
-                    <div className='bg-lilac lg:bg-white md:bg-white w-full max-w-md sm:w-full flex-grow lg:rounded-border lg:order-2 md:order-2 pb-16  md:pb-0 lg:pb-0'>
+                    <div className='display flex row justify-center items-center align-top bg-lilac lg:bg-white md:bg-white w-full max-w-md sm:w-full flex-grow lg:rounded-border lg:order-2 md:order-2 pb-16  md:pb-0 lg:pb-0'>
+                        <img src={backArrow } className='pl-6' alt="back arrow" />
                         <img src={ aluveLogo } className='lg:w-3/4 md:w-3/4 w-1/2 mx-auto' alt="aluve logo" />
                     </div>
 
