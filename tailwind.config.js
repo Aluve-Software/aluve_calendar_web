@@ -8,8 +8,18 @@ export default {
     extend: {
       backgroundColor: {
         'lilac': '#D6B9ED',
-      }
+        'dark-blue': '#140E48',
+        'light-blue': '#369FF7',
+        'orange': '#FF5922',
+      },
+    
+        borderRadius: {
+          'rounded-border': '50px 50px 50px 50px !important'
+        } 
+      
     },
   },
-  plugins: [],
+  plugins: [
+    'prettier-plugin-tailwindcss'
+  ],
 }
