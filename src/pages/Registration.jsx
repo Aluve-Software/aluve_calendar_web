@@ -40,6 +40,7 @@ export default function Registration() {
                             </p>
                         </div>
                         
+                        {/* FIX: image scaling */}
                         <div className='relative lg:-top-96 inset-full md:-top-64 md:inset-full md:left-full'>
                             <img
                                 src={timeImgBlack}
