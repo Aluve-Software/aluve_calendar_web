@@ -7,7 +7,7 @@
   --lilac: #D6B9ED;
   --dark-blue: #140E48;
   --light-blue: #369FF7; 
-  --orange: #FF5922;
+  --bright-orange: #FF5922 !important;
 }
 
 /* if you are struggling with applying this color in your jsx:
@@ -37,6 +37,10 @@
 
 .light-blue {
   color: var(--light-blue);
+}
+
+.bright-orange {
+  color: var(--bright-orange);
 }
 
 .rounded-border {

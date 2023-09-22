@@ -10,13 +10,23 @@ export default {
         'lilac': '#D6B9ED',
         'dark-blue': '#140E48',
         'light-blue': '#369FF7',
-        'orange': '#FF5922',
+        'bright-orange': '#FF5922 !important',
       },
-    
-        borderRadius: {
-          'rounded-border': '50px 50px 50px 50px !important'
-        } 
-      
+      textColor: {
+        'lilac': '#D6B9ED',
+        'dark-blue': '#140E48',
+        'light-blue': '#369FF7',
+        'bright-orange': '#FF5922 !important',
+      },
+      borderColor: {
+        'lilac': '#D6B9ED',
+        'dark-blue': '#140E48',
+        'light-blue': '#369FF7',
+        'bright-orange': '#FF5922 !important',
+      },
+      borderRadius: {
+        'rounded-border': '50px 50px 50px 50px !important'
+      } 
     },
   },
   plugins: [
