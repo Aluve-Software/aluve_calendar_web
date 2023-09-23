@@ -9,6 +9,7 @@
   --light-blue: #369FF7; 
   --bright-orange: #FF5922 !important;
   --grey: #313037;
+  --light-grey: #838295;
 }
 
 /* if you are struggling with applying this color in your jsx:
@@ -46,6 +47,10 @@
 
 .grey {
   color: var(--grey);
+}
+
+.light-grey {
+  color: var(--light-grey);
 }
 
 .rounded-border {

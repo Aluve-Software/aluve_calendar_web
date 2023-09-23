@@ -17,13 +17,16 @@ export default {
         'dark-blue': '#140E48',
         'light-blue': '#369FF7',
         'bright-orange': '#FF5922 !important',
+        'grey': '#313037',
+        'light-grey': '#838295'
       },
       borderColor: {
         'lilac': '#D6B9ED',
         'dark-blue': '#140E48',
         'light-blue': '#369FF7',
         'bright-orange': '#FF5922 !important',
-        'grey': '#313037'
+        'grey': '#313037',
+        'light-grey': '#838295'
       },
       borderRadius: {
         'rounded-border': '50px 50px 50px 50px !important'
