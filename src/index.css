@@ -47,6 +47,10 @@
   border-radius: 10px 10px 10px 10px !important;
 }
 
+.space-mono {
+  font-family: 'Space Mono', monospace;
+}
+
 body {
   /* margin: 0;
   display: flex;

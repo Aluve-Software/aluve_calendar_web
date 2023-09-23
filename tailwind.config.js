@@ -26,7 +26,10 @@ export default {
       },
       borderRadius: {
         'rounded-border': '50px 50px 50px 50px !important'
-      } 
+      },
+      fontFamily: {
+        'space-mono': 'Space Mono'
+      }
     },
   },
   plugins: [
