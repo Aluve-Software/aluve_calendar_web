@@ -8,6 +8,7 @@
   --dark-blue: #140E48;
   --light-blue: #369FF7; 
   --bright-orange: #FF5922 !important;
+  --grey: #313037;
 }
 
 /* if you are struggling with applying this color in your jsx:
@@ -41,6 +42,10 @@
 
 .bright-orange {
   color: var(--bright-orange);
+}
+
+.grey {
+  color: var(--grey);
 }
 
 .rounded-border {
