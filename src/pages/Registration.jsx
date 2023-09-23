@@ -13,12 +13,12 @@ export default function Registration() {
             <div className="relative min-h-screen lg:overflow-hidden overflow-visible justify-center">
                 <div className="display flex flex-col bg-white justify-center w-full min-h-screen sm:flex-row flex-grow">
 
-                    <div className='display flex row justify-center lg:items-start md:items-start items-start bg-lilac w-full max-w-md sm:w-full flex-grow lg:rounded-border pt-4 pb-12 md:pb-0 lg:pb-0'>
+                    <div className='display flex row justify-center lg:items-start md:items-start items-start bg-lilac w-full max-w-lg sm:w-full flex-grow lg:rounded-border pt-4 pb-12 md:pb-0 lg:pb-0'>
                         <div className='display flex-col'>
                            {/* ADD functionality to back button */}
                             <div className='display flex row justify-center lg:pb-10 md:pb-10'>
                                 <img src={backArrow} className='pl-6 lg:pl-10 md:pl-10 mt-2 mb-2' onClick={() => window.history.back()} alt="back arrow" />
-                                <img src={aluveLogoNoText} className='lg:w-1/4 md:w-3/4 w-1/6 mx-auto mt-2 mb-2' alt="aluve logo" />   
+                                <img src={aluveLogoNoText} className='lg:w-1/4 md:w-3/4 w-1/2 mx-auto mt-2 mb-2' alt="aluve logo" />   
                             </div>
                             
                         
@@ -37,7 +37,7 @@ export default function Registration() {
                     </div>
                     
 
-                    <div className='bg-white w-full pr-6 pl-6 md:pr-24 md:pl-20 md:w-2/3 flex-grow lg:py-16 md:py-16 lg:px-16 md:px-16 lg:pt-24 md:pt-24 lg:pl-32 lg:pr-80 text-left lg:text-white md:text-white sm:text-black '>
+                    <div className='bg-white w-full pr-6 pl-6 md:pr-24 md:pl-20 lg:w-1/4 md:w-1/4 flex-grow lg:py-16 md:py-16 lg:px-16 md:px-16 lg:pt-24 md:pt-24 lg:pl-32 lg:pr-80 text-left lg:text-white md:text-white sm:text-black '>
                         <div className='flex-grow'>
                             
 
@@ -55,10 +55,10 @@ export default function Registration() {
                         </div>
                         
                         {/* FIX: image scaling */}
-                        <div className='relative lg:-top-64 inset-full md:-top-64 md:inset-full md:left-full'>
+                        <div className='relative   lg:-top-0 lg:bottom-1/4 w-9/12 lg:-left-3/4 inset-full  md:-top-64 md:inset-full md:left-full'>
                             <img
                                 src={timeImgBlack}
-                                width={"600px"}
+                                
                                 alt="time image black"
                                 className='hidden lg:block'
                             />
