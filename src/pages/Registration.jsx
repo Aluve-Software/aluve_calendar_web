@@ -1,5 +1,6 @@
 import backArrow from '../assets/backArrow.svg';
-import aluveLogo from '../assets/aluve_monochrome_black.png';
+// import aluveLogo from '../assets/aluve_monochrome_black.png';
+import aluveLogoNoText from '../assets/aluveBlackNoText.svg'
 import timeImgBlack from '../assets/timeImgBlack.svg';
 import timeImgWhite from '../assets/timeImgWhite.svg';
 import '../index.css';
@@ -11,11 +12,24 @@ export default function Registration() {
             {/* FIX: class arrangement and legibility */}
             <div className="relative min-h-screen lg:overflow-hidden overflow-visible justify-center">
                 <div className="display flex flex-col bg-white justify-center w-full min-h-screen sm:flex-row flex-grow">
-                    <div className='display flex row justify-center lg:items-start md:items-start items-center align-top bg-lilac  w-full max-w-md sm:w-full flex-grow lg:rounded-border  pb-16  md:pb-0 lg:pb-0'>
-                        {/* ADD functionality to back button */}
-                        <img src={backArrow } className='pl-6 lg:pl-10 md:pl-10  ' onClick={() => window.history.back()} alt="back arrow" />
-                        <img src={ aluveLogo } className='lg:w-2/4 md:w-3/4 w-1/2 mx-auto' alt="aluve logo" />
+
+                    <div className='display flex row justify-center lg:items-start md:items-start items-start bg-lilac w-full max-w-md sm:w-full flex-grow lg:rounded-border pt-4 pb-12 md:pb-0 lg:pb-0'>
+                        <div className='display flex-col'>
+                           {/* ADD functionality to back button */}
+                            <div className='display flex row justify-center lg:pb-10 md:pb-10'>
+                                <img src={backArrow} className='pl-6 lg:pl-10 md:pl-10 mt-2 mb-2' onClick={() => window.history.back()} alt="back arrow" />
+                                <img src={aluveLogoNoText} className='lg:w-1/4 md:w-3/4 w-1/6 mx-auto mt-2 mb-2' alt="aluve logo" />   
+                            </div>
+                            
+                        
+                            <div className='hidden lg:block md:block lg:text-white font-space-mono text-center'>
+                                <p className='lg:text-lg md:text-sm font-medium'>Get organised with the</p>
+                                <span className='lg:text-2xl md:text-2xl font-extrabold'>Calendar App.</span>
+                            </div> 
+                        </div>
                     </div>
+
+                   
 
                     {/* time image in mobile view only */}
                     <div className='lg:hidden flex-grow h-24'>
@@ -41,7 +55,7 @@ export default function Registration() {
                         </div>
                         
                         {/* FIX: image scaling */}
-                        <div className='relative lg:-top-96 inset-full md:-top-64 md:inset-full md:left-full'>
+                        <div className='relative lg:-top-64 inset-full md:-top-64 md:inset-full md:left-full'>
                             <img
                                 src={timeImgBlack}
                                 width={"600px"}
