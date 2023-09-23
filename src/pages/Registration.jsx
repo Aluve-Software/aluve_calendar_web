@@ -21,7 +21,7 @@ export default function Registration() {
                                 <img src={aluveLogoNoText} className='lg:w-1/4 md:w-3/4 w-1/2 mx-auto mt-2 mb-2' alt="aluve logo" />   
                             </div>
                             
-                        
+                           
                             <div className='hidden lg:block md:block lg:text-white font-space-mono text-center'>
                                 <p className='lg:text-lg md:text-sm font-medium'>Get organised with the</p>
                                 <span className='lg:text-2xl md:text-2xl font-extrabold'>Calendar App.</span>
@@ -38,27 +38,48 @@ export default function Registration() {
                     
 
                     <div className='bg-white w-full pr-6 pl-6 md:pr-24 md:pl-20 lg:w-1/4 md:w-1/4 flex-grow lg:py-16 md:py-16 lg:px-16 md:px-16 lg:pt-24 md:pt-24 lg:pl-32 lg:pr-80 text-left lg:text-white md:text-white sm:text-black '>
-                        <div className='flex-grow'>
-                            
+                        <div className='flex-grow flex flex-col items-center justify-center'>
+                            <div className='hidden lg:block md:block text-grey'>
+                                <p className=' font-bold text-2xl lg:text:2xl'>Create your account</p>
+
+                                {/* LINK to auth functionality */}
+                                {/* ADD input and onChange triggers */}
+                                <div className='text-sm pb-5'>
+                                    <label htmlFor="email" className="">Email Address</label>
+                                    <input type="email" id="email" className="bg-white border-2 border-lilac rounded-md text-light-grey w-full p-2.5" placeholder="Enter email address" required />                 
+                                </div> 
+
+
+                                <div className='text-sm pb-5'>
+                                    <label htmlFor="password" className=''>Password</label>
+                                    <input type="password" id="password" className="bg-white border-2 border-lilac rounded-md text-light-grey w-full p-2.5" placeholder="Enter password" required/>
+                                    <span className='text-xs'>* Your password must be at least 8 characters including a number, a symbol, a lowercase and uppercase letter.</span>
+                                </div> 
+
+                                <div className='text-sm pb-5'>
+                                    <label htmlFor="password" className=''>Confirm Password</label>
+                                    <input type="password" id="password" className="bg-white border-2 border-lilac rounded-md text-light-grey w-full p-2.5" placeholder="Enter password again" required/>
+                                </div> 
+                            </div>  
 
                             {/* Link buttons to actions and pages */}
-                            <div className='flex flex-col items-center gap-4 lg:flex-row md:flex-row justify-center w-full  lg:text-md text-sm md:text-md font-bold py-4 lg:pt-16 md:pt-8'>
+                            <div className='flex flex-col items-center gap-4  justify-center w-full lg:w-3/4  lg:text-md text-sm md:text-md font-bold py-4 lg:pt-16 md:pt-8'>
                                 <button className='w-full lg:px-10 py-2 md:px-5 rounded-lg md:rounded lg:rounded bg-light-blue text-white'>Register With Email</button>
+                                <p className='text-grey'>OR</p>
                                 <button className='w-full lg:px-10 py-2 md:px-5 rounded-lg md:rounded lg:rounded border-2 border-bright-orange text-bright-orange'>Register With Google</button>
                                 <button className='w-full lg:px-10 py-2 md:px-5 rounded-lg md:rounded lg:rounded border-2 border-light-blue text-light-blue'>Register With Facebook</button>
                             </div>
 
                             {/* ADD functionality to redirect to sign in page */}
-                            <p className='text-sm lg:text-lg md:text-md font-medium text-gray-400'>
+                            <p className='text-sm lg:text-md md:text-md font-medium text-grey'>
                                 Already have an account? <span className='text-light-blue hover:underline cursor-pointer' onClick={() => {}}>Sign in.</span>
                             </p>
                         </div>
                         
                         {/* FIX: image scaling */}
-                        <div className='relative   lg:-top-0 lg:bottom-1/4 w-9/12 lg:-left-3/4 inset-full  md:-top-64 md:inset-full md:left-full'>
+                        <div className='relative lg:-top-1/2  w-9/12 lg:-left-3/4 inset-full  md:-top-64 md:inset-full md:left-full'>
                             <img
                                 src={timeImgBlack}
-                                
                                 alt="time image black"
                                 className='hidden lg:block'
                             />
