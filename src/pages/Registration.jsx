@@ -20,7 +20,7 @@ export default function Registration() {
             <div className="relative min-h-screen lg:overflow-hidden overflow-visible justify-center">
                 <div className="display flex flex-col bg-white justify-center w-full min-h-screen sm:flex-row flex-grow">
 
-                    <div className='display flex row justify-center lg:items-start md:items-start items-start bg-lilac w-full max-w-lg sm:w-full flex-grow lg:rounded-border pt-4 pb-12 md:pb-0 lg:pb-0'>
+                    <div className='display flex row justify-center lg:items-start md:items-start items-start bg-lilac w-full lg:w-1/12 sm:w-full flex-grow lg:rounded-border pt-4 pb-12 md:pb-0 lg:pb-0'>
                         <div className='display flex-col'>
                            {/* ADD functionality to back button */}
                             <div className='display flex row justify-center lg:pb-10 md:pb-10'>
@@ -46,11 +46,11 @@ export default function Registration() {
                     </div>
                     
 
-                    <div className='bg-white w-full pr-6 pl-6 md:pr-24 md:pl-20 lg:w-1/4 md:w-1/4 flex-grow lg:py-16 md:py-16 lg:px-60 md:px-16 lg:pt-8 md:pt-24  text-left lg:text-white md:text-white sm:text-black '>
+                    <div className='bg-white w-full pr-6 pl-6  lg:w-1/4 md:w-full flex-grow lg:py-16 md:py-16 lg:px-60 md:px-8 lg:pt-8 md:pt-24  text-left lg:text-white md:text-white sm:text-black '>
                         <div className='flex-grow flex flex-col items-center justify-center'>
                             {showForm && (
                             <form action='' className=' lg:block md:block text-grey '>
-                                <p className=' font-bold text-3xl lg:text:2xl py-8'>Create your account.</p>
+                                <p className=' font-bold text-3xl lg:text:2xl py-8 lg:py-4 md:py-4'>Create your account.</p>
 
                                 {/* LINK to auth functionality */}
                                 {/* ADD input and onChange triggers */}
