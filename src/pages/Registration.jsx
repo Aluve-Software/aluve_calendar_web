@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import backArrow from '../assets/backArrow.svg';
 // import aluveLogo from '../assets/aluve_monochrome_black.png';
 import aluveLogoNoText from '../assets/aluveBlackNoText.svg'
@@ -6,7 +7,13 @@ import timeImgWhite from '../assets/timeImgWhite.svg';
 import '../index.css';
 
 export default function Registration() {
-   
+    const [showForm, setShowForm] = useState(false);
+
+    // Function to toggle the form visibility
+    const toggleForm = () => {
+      setShowForm(!showForm);
+    };
+
     return (
         <>
             {/* FIX: class arrangement and legibility */}
@@ -33,13 +40,14 @@ export default function Registration() {
 
                     {/* time image in mobile view only */}
                     <div className='lg:hidden flex-grow h-24'>
-                        <img src={ timeImgWhite } className='lg:hidden md:hidden w-3/4 mx-auto relative -top-28  ' alt="time image white" />
+                        <img src={ timeImgWhite } className='lg:hidden md:hidden w-3/4 mx-auto relative -top-20  ' alt="time image white" />
                     </div>
                     
 
                     <div className='bg-white w-full pr-6 pl-6 md:pr-24 md:pl-20 lg:w-1/4 md:w-1/4 flex-grow lg:py-16 md:py-16 lg:px-60 md:px-16 lg:pt-8 md:pt-24  text-left lg:text-white md:text-white sm:text-black '>
                         <div className='flex-grow flex flex-col items-center justify-center'>
-                            <div className='hidden lg:block md:block text-grey '>
+                            {showForm && (
+                            <form action='' className=' lg:block md:block text-grey '>
                                 <p className=' font-bold text-2xl lg:text:2xl pb-10'>Create your account</p>
 
                                 {/* LINK to auth functionality */}
@@ -60,11 +68,13 @@ export default function Registration() {
                                     <label htmlFor="password" className=''>Confirm Password</label>
                                     <input type="password" id="password" className="bg-white border-2 border-lilac rounded-md text-light-grey w-full p-2.5" placeholder="Enter password again" required/>
                                 </div> 
-                            </div>  
+                            </form>  
+                            )}
 
                             {/* Link buttons to actions and pages */}
                             <div className='flex flex-col items-center gap-4  justify-center w-full  lg:text-md text-sm md:text-md font-bold py-4 lg:pt-16 md:pt-8'>
-                                <button className='w-full lg:px-10 py-2 lg:py-3 md:py-3 md:px-5 rounded-lg md:rounded lg:rounded bg-light-blue text-white'>Register With Email</button>
+                                {/* add onClick for mobile view to bring up input files */}
+                                <button className='w-full lg:px-10 py-2 lg:py-3 md:py-3 md:px-5 rounded-lg md:rounded lg:rounded bg-light-blue text-white' onClick={toggleForm}>Register With Email</button>
                                 <p className='text-grey'>OR</p>
                                 <button className='w-full lg:px-10 py-2 lg:py-3 md:py-3 md:px-5 rounded-lg md:rounded lg:rounded border-2 border-bright-orange text-bright-orange'>Register With Google</button>
                                 <button className='w-full lg:px-10 py-2 lg:py-3 md:py-3 md:px-5 rounded-lg md:rounded lg:rounded border-2 border-light-blue text-light-blue'>Register With Facebook</button>
@@ -77,7 +87,7 @@ export default function Registration() {
                         </div>
                         
                         {/* FIX: image scaling */}
-                        <div className='relative lg:-top-1/2  w-9/12 lg:-left-3/4 inset-full  md:-top-64 md:inset-full md:left-full'>
+                        <div className='relative lg:-top-1/2 md:-top-1/2 w-9/12 lg:-left-full md:-left-3/4 inset-full   md:inset-full'>
                             <img
                                 src={timeImgBlack}
                                 alt="time image black"
