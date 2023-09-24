@@ -38,9 +38,11 @@ export default function Registration() {
 
                    
 
-                    {/* time image in mobile view only */}
-                    <div className='lg:hidden flex-grow h-24'>
-                        <img src={ timeImgWhite } className='lg:hidden md:hidden w-3/4 mx-auto relative -top-20  ' alt="time image white" />
+                    {/* Time image only visible in mobile view and conditionally rendered when form is toggled */}
+                    <div className={`lg:hidden flex-grow ${showForm ? 'h-0' : 'h-24'}`}>
+                        {showForm ? null : (
+                            <img src={timeImgWhite} className='md:hidden w-3/4 mx-auto relative -top-20' alt="time image white" />
+                        )}
                     </div>
                     
 
@@ -48,25 +50,25 @@ export default function Registration() {
                         <div className='flex-grow flex flex-col items-center justify-center'>
                             {showForm && (
                             <form action='' className=' lg:block md:block text-grey '>
-                                <p className=' font-bold text-2xl lg:text:2xl pb-10'>Create your account</p>
+                                <p className=' font-bold text-3xl lg:text:2xl py-8'>Create your account.</p>
 
                                 {/* LINK to auth functionality */}
                                 {/* ADD input and onChange triggers */}
                                 <div className='text-sm pb-5'>
                                     <label htmlFor="email" className="">Email Address</label>
-                                    <input type="email" id="email" className="bg-white border-2 border-lilac rounded-md text-light-grey w-full p-2.5" placeholder="Enter email address" required />                 
+                                    <input type="email" id="email" className="bg-white border-2 border-lilac rounded-md text-light-grey w-full p-1.5 lg:p-2.5 md:p-2.25 " placeholder="Enter email address" required />                 
                                 </div> 
 
 
                                 <div className='text-sm pb-5'>
                                     <label htmlFor="password" className=''>Password</label>
-                                    <input type="password" id="password" className="bg-white border-2 border-lilac rounded-md text-light-grey w-full p-2.5" placeholder="Enter password" required/>
-                                    <span className='text-xs'>* Your password must be at least 8 characters including a number, a symbol, a lowercase and uppercase letter.</span>
+                                    <input type="password" id="password" className="bg-white border-2 border-lilac rounded-md text-light-grey w-full p-1.5 lg:p-2.5 md:p-2.25" placeholder="Enter password" required/>
+                                    <span className='text-xs leading-tight'>* Your password must be at least 8 characters including a number, a symbol, a lowercase and uppercase letter.</span>
                                 </div> 
 
                                 <div className='text-sm '>
                                     <label htmlFor="password" className=''>Confirm Password</label>
-                                    <input type="password" id="password" className="bg-white border-2 border-lilac rounded-md text-light-grey w-full p-2.5" placeholder="Enter password again" required/>
+                                    <input type="password" id="password" className="bg-white border-2 border-lilac rounded-md text-light-grey w-full  p-1.5 lg:p-2.5 md:p-2.25" placeholder="Enter password again" required/>
                                 </div> 
                             </form>  
                             )}
@@ -81,7 +83,7 @@ export default function Registration() {
                             </div>
 
                             {/* ADD functionality to redirect to sign in page */}
-                            <p className='text-sm lg:text-md md:text-md font-medium text-grey'>
+                            <p className='text-sm pb-10 lg:text-md md:text-md font-medium text-grey'>
                                 Already have an account? <span className='text-light-blue hover:underline cursor-pointer' onClick={() => {}}>Sign in.</span>
                             </p>
                         </div>
