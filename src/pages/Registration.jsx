@@ -4,15 +4,23 @@ import backArrow from '../assets/backArrow.svg';
 import aluveLogoNoText from '../assets/aluveBlackNoText.svg'
 import timeImgBlack from '../assets/timeImgBlack.svg';
 import timeImgWhite from '../assets/timeImgWhite.svg';
+import eyeOpenIcon from '../assets/eyeOpenIcon.svg'
+import eyeShutIcon from '../assets/eyeShutIcon.svg'
 import '../index.css';
 
 export default function Registration() {
     const [showForm, setShowForm] = useState(false);
+    const [passwordVisible, setPasswordVisible] = useState(false);
 
     // Function to toggle the form visibility
-    const toggleForm = () => {
+    function toggleForm() {
       setShowForm(!showForm);
-    };
+    }
+
+    // Function to toggle password visibility
+    function togglePasswordVisibility() {
+        setPasswordVisible(!passwordVisible)
+    } 
 
     return (
         <>
@@ -25,7 +33,7 @@ export default function Registration() {
                            {/* ADD functionality to back button */}
                             <div className='display flex row justify-center lg:pb-10 md:pb-10'>
                                 <img src={backArrow} className='pl-6 lg:pl-10 md:pl-10 mt-2 mb-2' onClick={() => window.history.back()} alt="back arrow" />
-                                <img src={aluveLogoNoText} className='lg:w-1/4 md:w-3/4 w-1/2 mx-auto mt-2 mb-2' alt="aluve logo" />   
+                                <img src={aluveLogoNoText} className='lg:w-1/4 md:w-1/4 w-1/2 mx-auto mt-2 mb-2' alt="aluve logo" />   
                             </div>
                             
                            
@@ -39,14 +47,14 @@ export default function Registration() {
                    
 
                     {/* Time image only visible in mobile view and conditionally rendered when form is toggled */}
-                    <div className={`lg:hidden flex-grow ${showForm ? 'h-0' : 'h-24'}`}>
+                    <div className={`lg:hidden md:hidden md:h-0 flex-grow ${showForm ? 'h-0' : 'h-24'}`}>
                         {showForm ? null : (
-                            <img src={timeImgWhite} className='md:hidden w-3/4 mx-auto relative -top-20' alt="time image white" />
+                            <img src={timeImgWhite} className='md:hidden w-3/4 max-w-3/4 mx-auto relative -top-20 py:10' alt="time image white" />
                         )}
                     </div>
                     
 
-                    <div className='bg-white w-full pr-6 pl-6  lg:w-1/4 md:w-full flex-grow lg:py-16 md:py-16 lg:px-60 md:px-8 lg:pt-8 md:pt-24  text-left lg:text-white md:text-white sm:text-black '>
+                    <div className='bg-white w-full px-6 lg:w-1/4 md:w-full flex-grow lg:py-16 md:py-16 lg:px-60 md:px-8 lg:pt-8 md:pt-24  text-left lg:text-white md:text-white sm:text-black '>
                         <div className='flex-grow flex flex-col items-center justify-center'>
                             {showForm && (
                             <form action='' className=' lg:block md:block text-grey '>
@@ -62,7 +70,26 @@ export default function Registration() {
 
                                 <div className='text-sm pb-5'>
                                     <label htmlFor="password" className=''>Password</label>
-                                    <input type="password" id="password" className="bg-white border-2 border-lilac rounded-md text-light-grey w-full p-1.5 lg:p-2.5 md:p-2.25" placeholder="Enter password" required/>
+                                    <input 
+                                        type={passwordVisible ? 'text' : 'password'}
+                                        id="password" 
+                                        className="bg-white border-2 border-lilac rounded-md text-light-grey w-full p-1.5 lg:p-2.5 md:p-2.25" 
+                                        placeholder="Enter password" 
+                                        required
+                                    />
+                                    <button
+                                        type='button'
+                                        onClick={togglePasswordVisibility}
+                                        className='absolute right-2 top-1/2 transform -translate-y-1/2 focus:outline-none'
+                                    >
+                                        <img 
+                                            src={passwordVisible ? eyeShutIcon : eyeOpenIcon} 
+                                            alt={passwordVisible ? 'Hide password' : 'Show password'} 
+                                        />
+                                    </button>
+                                    
+
+
                                     <span className='text-xs leading-tight'>* Your password must be at least 8 characters including a number, a symbol, a lowercase and uppercase letter.</span>
                                 </div> 
 
@@ -93,7 +120,7 @@ export default function Registration() {
                             <img
                                 src={timeImgBlack}
                                 alt="time image black"
-                                className='hidden lg:block'
+                                className='hidden lg:block md:block'
                             />
                         </div>
                     </div>
