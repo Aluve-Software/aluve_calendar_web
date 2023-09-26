@@ -11,6 +11,7 @@ import '../index.css';
 export default function Registration() {
     const [showForm, setShowForm] = useState(false);
     const [passwordVisible, setPasswordVisible] = useState(false);
+    const [confirmPasswordVisible, setConfirmPasswordVisible] = useState(false)
 
     // Function to toggle the form visibility
     function toggleForm() {
@@ -21,6 +22,10 @@ export default function Registration() {
     function togglePasswordVisibility() {
         setPasswordVisible(!passwordVisible)
     } 
+
+    function toggleConfirmPasswordVisibility() {
+        setConfirmPasswordVisible(!confirmPasswordVisible)
+    }
 
     return (
         <>
@@ -68,35 +73,52 @@ export default function Registration() {
                                 </div> 
 
 
-                                <div className='text-sm pb-5'>
+                                <div className='text-sm pb-5 relative'>
                                     <label htmlFor="password" className=''>Password</label>
-                                    <input 
+                                    <div className='relative flex'>
+                                        <input
                                         type={passwordVisible ? 'text' : 'password'}
-                                        id="password" 
-                                        className="bg-white border-2 border-lilac rounded-md text-light-grey w-full p-1.5 lg:p-2.5 md:p-2.25" 
-                                        placeholder="Enter password" 
+                                        id="password"
+                                        className="bg-white border-2 border-lilac rounded-md text-light-grey w-full p-1.5 lg:p-2.5 md:p-2.25"
+                                        placeholder="Enter password"
                                         required
-                                    />
-                                    <button
+                                        />
+                                        <button
                                         type='button'
                                         onClick={togglePasswordVisibility}
-                                        className='absolute right-2 top-1/2 transform -translate-y-1/2 focus:outline-none'
-                                    >
-                                        <img 
-                                            src={passwordVisible ? eyeShutIcon : eyeOpenIcon} 
-                                            alt={passwordVisible ? 'Hide password' : 'Show password'} 
+                                        className='absolute top-1/2 right-2 transform -translate-y-1/2 focus:outline-none'
+                                        >
+                                        <img
+                                            src={passwordVisible ? eyeOpenIcon : eyeShutIcon}
+                                            alt={passwordVisible ? 'Show password' : 'Hide password'}
                                         />
-                                    </button>
-                                    
-
-
-                                    <span className='text-xs leading-tight'>* Your password must be at least 8 characters including a number, a symbol, a lowercase and uppercase letter.</span>
+                                        </button>
+                                    </div>
+                                    <span className='text-xs leading-tight'>* Your password must be at least 8 characters including a number, a symbol, a lowercase, and uppercase letter.</span>
                                 </div> 
 
-                                <div className='text-sm '>
-                                    <label htmlFor="password" className=''>Confirm Password</label>
-                                    <input type="password" id="password" className="bg-white border-2 border-lilac rounded-md text-light-grey w-full  p-1.5 lg:p-2.5 md:p-2.25" placeholder="Enter password again" required/>
-                                </div> 
+                                <div className='text-sm relative pb-5'>
+                                    <label htmlFor="confirmPassword" className=''>Confirm Password</label>
+                                    <div className='relative flex'>
+                                        <input
+                                        type={confirmPasswordVisible ? 'text' : 'password'}
+                                        id="confirmPassword"
+                                        className="bg-white border-2 border-lilac rounded-md text-light-grey w-full p-1.5 lg:p-2.5 md:p-2.25"
+                                        placeholder="Enter password again"
+                                        required
+                                        />
+                                        <button
+                                        type='button'
+                                        onClick={toggleConfirmPasswordVisibility}
+                                        className='absolute top-1/2 right-2 transform -translate-y-1/2 focus:outline-none'
+                                        >
+                                        <img
+                                            src={confirmPasswordVisible ? eyeOpenIcon : eyeShutIcon}
+                                            alt={confirmPasswordVisible ? 'Show password' : 'Hide password'}
+                                        />
+                                        </button>
+                                    </div>
+                                    </div> 
                             </form>  
                             )}
 
