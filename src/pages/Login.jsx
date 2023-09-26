@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import backArrow from '../assets/backArrow.svg';
-// import aluveLogo from '../assets/aluve_monochrome_black.png';
-import aluveLogoNoText from '../assets/aluveBlackNoText.svg'
+// import backArrow from '../assets/backArrow.svg';
+import aluveLogo from '../assets/Aluve_monochrome_black 1.svg';
+// import aluveLogoNoText from '../assets/aluveBlackNoText.svg'
 import timeImgBlack from '../assets/timeImgBlack.svg';
 import eyeOpenIcon from '../assets/eyeOpenIcon.svg'
 import eyeShutIcon from '../assets/eyeShutIcon.svg'
@@ -26,8 +26,9 @@ export default function Login() {
                         <div className='display flex-col'>
                            {/* ADD functionality to back button */}
                             <div className='display flex row justify-center lg:pb-10 md:pb-10'>
-                                <img src={backArrow} className='pl-6 lg:pl-10 md:pl-10 mt-2 mb-2' onClick={() => window.history.back()} alt="back arrow" />
-                                <img src={aluveLogoNoText} className='lg:w-1/4 md:w-1/4 w-1/2 mx-auto mt-2 mb-2' alt="aluve logo" />   
+                                {/* <img src={backArrow} className='pl-6 lg:pl-10 md:pl-10 mt-2 mb-2' onClick={() => window.history.back()} alt="back arrow" /> */}
+                                {/* <img src={aluveLogoNoText} className='lg:w-1/4 md:w-1/4 w-1/2 mx-auto mt-2 mb-2' alt="aluve logo" />    */}
+                                <img src={aluveLogo} alt="aluve logo text" className='w-1/2 lg:hidden md:hidden' />
                             </div>
                             
                            
@@ -39,54 +40,53 @@ export default function Login() {
                     </div>
 
 
-                    <div className='bg-white w-full px-6 lg:w-1/4 md:w-full flex-grow lg:py-16 md:py-16 lg:px-60 md:px-8 lg:pt-8 md:pt-24  text-left lg:text-white md:text-white sm:text-black '>
+                    <div className='bg-white w-full px-6 lg:w-1/4 md:w-full flex-grow lg:pb-16 md:py-16 lg:px-60 md:px-8 lg:pt-0 md:pt-12  text-left lg:text-white md:text-white sm:text-black '>
                         <div className='flex-grow flex flex-col items-center justify-center'>
+                            <img src={aluveLogo} alt="aluve logo text" className='hidden lg:block md:block w-3/4' />
                        
-                            <form action='' className=' lg:block md:block text-grey '>
-                                <p className=' font-bold text-3xl lg:text:2xl py-8 lg:py-4 md:py-4'>Welcome Back.</p>
+                        <form action='' className='lg:block md:block text-grey'>
+                            <p className='font-bold text-3xl lg:text-2xl py-8 lg:py-8 md:py-4'>Good to see you again.</p>
 
-                                {/* LINK to auth functionality */}
-                                {/* ADD input and onChange triggers */}
+                            {/* Container for email, password, and Sign in button */}
+                            <div className='flex flex-col pb-5'>
                                 <div className='text-sm pb-5'>
-                                    <label htmlFor="email" className="">Email Address</label>
-                                    <input type="email" id="email" className="bg-white border-2 border-lilac rounded-md text-light-grey w-full p-1.5 lg:p-2.5 md:p-2.25 " placeholder="Enter email address" required />                 
-                                </div> 
-
+                                <label htmlFor="email" className="">Email Address</label>
+                                <input type="email" id="email" className="bg-white border-2 border-lilac rounded-md text-light-grey w-full p-1.5 lg:p-2.5 md:p-2.25 " placeholder="Enter email address" required />
+                                </div>
 
                                 <div className='text-sm pb-5 relative'>
-                                    <label htmlFor="password" className=''>Password</label>
-                                    <div className='relative flex'>
-                                        <input
-                                        type={passwordVisible ? 'text' : 'password'}
-                                        id="password"
-                                        className="bg-white border-2 border-lilac rounded-md text-light-grey w-full p-1.5 lg:p-2.5 md:p-2.25"
-                                        placeholder="Enter password"
-                                        required
-                                        />
-                                        <button
-                                        type='button'
-                                        onClick={togglePasswordVisibility}
-                                        className='absolute top-1/2 right-2 transform -translate-y-1/2 focus:outline-none'
-                                        >
-                                        <img
-                                            src={passwordVisible ? eyeOpenIcon : eyeShutIcon}
-                                            alt={passwordVisible ? 'Show password' : 'Hide password'}
-                                        />
-                                        </button>
-                                    </div>
+                                <label htmlFor="password" className=''>Password</label>
+                                <div className='relative flex'>
+                                    <input
+                                    type={passwordVisible ? 'text' : 'password'}
+                                    id="password"
+                                    className="bg-white border-2 border-lilac rounded-md text-light-grey w-full p-1.5 lg:p-2.5 md:p-2.25"
+                                    placeholder="Enter password"
+                                    required
+                                    />
+                                    <button
+                                    type='button'
+                                    onClick={togglePasswordVisibility}
+                                    className='absolute top-1/2 right-2 transform -translate-y-1/2 focus:outline-none'
+                                    >
+                                    <img
+                                        src={passwordVisible ? eyeOpenIcon : eyeShutIcon}
+                                        alt={passwordVisible ? 'Show password' : 'Hide password'}
+                                    />
+                                    </button>
+                                </div>
 
-                                    {/* ADD link to 'forgot password' page */}
-                                    <span className='flex text-sm font-bold text-light-blue hover:underline cursor-pointer justify-end text-right' onClick={() => {}}>Forgot Password?</span>
-                                </div> 
-                            </form>  
+                                {/* ADD link to 'forgot password' page */}
+                                <span className='text-sm font-bold text-light-blue hover:underline cursor-pointer justify-end text-right' onClick={() => {}}>Forgot Password?</span>
+                                </div>
+
+                                {/* ADD Link to sign user in */}
+                                <button className='w-full lg:px-10 py-2 lg:py-3 md:py-3 md:px-5 rounded-lg md:rounded lg:rounded bg-light-blue text-white'>Sign in</button>
+                            </div>
+                        </form>  
                        
 
-                            {/* ADD Link to sign user in */}
-                            <div className='flex flex-col items-center gap-4 justify-center w-full lg:text-md text-sm md:text-md font-bold py-4 lg:pt-16 md:pt-8'>
-                                <button className='w-full lg:px-10 py-2 lg:py-3 md:py-3 md:px-5 rounded-lg md:rounded lg:rounded bg-light-blue text-white' >
-                                    Sign In
-                                </button>     
-                            </div>
+
 
                             {/* ADD functionality to redirect to sign in page */}
                             <p className='text-sm pb-10 lg:text-md md:text-md font-medium text-grey'>
