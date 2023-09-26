@@ -74,13 +74,10 @@ export default function Login() {
                                         />
                                         </button>
                                     </div>
+
                                     {/* ADD link to 'forgot password' page */}
-                                    <span className='text-xs text-light-blue hover:underline cursor-pointert' onClick={() => {}}>Forgot Password?</span>
-                                    {/* 'text-light-blue hover:underline cursor-pointer' onClick={() => {}} */}
-
+                                    <span className='flex text-sm font-bold text-light-blue hover:underline cursor-pointer justify-end text-right' onClick={() => {}}>Forgot Password?</span>
                                 </div> 
-
-                                
                             </form>  
                        
 
@@ -93,7 +90,7 @@ export default function Login() {
 
                             {/* ADD functionality to redirect to sign in page */}
                             <p className='text-sm pb-10 lg:text-md md:text-md font-medium text-grey'>
-                                Don't have an account? <span className='text-light-blue hover:underline cursor-pointer' onClick={() => {}}>Register</span>
+                                Don't have an account? <span className='font-bold text-light-blue hover:underline cursor-pointer' onClick={() => {}}>Register</span>
                             </p>
                         </div>
                         
