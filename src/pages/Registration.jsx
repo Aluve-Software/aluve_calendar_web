@@ -123,9 +123,19 @@ export default function Registration() {
                             )}
 
                             {/* Link buttons to actions and pages */}
-                            <div className='flex flex-col items-center gap-4  justify-center w-full  lg:text-md text-sm md:text-md font-bold py-4 lg:pt-16 md:pt-8'>
-                                {/* add onClick for mobile view to bring up input files */}
-                                <button className='w-full lg:px-10 py-2 lg:py-3 md:py-3 md:px-5 rounded-lg md:rounded lg:rounded bg-light-blue text-white' onClick={toggleForm}>Register With Email</button>
+                            <div className='flex flex-col items-center gap-4 justify-center w-full lg:text-md text-sm md:text-md font-bold py-4 lg:pt-16 md:pt-8'>
+                                {showForm ? (
+                                    <button
+                                    type="submit"
+                                    className='w-full lg:px-10 py-2 lg:py-3 md:py-3 md:px-5 rounded-lg md:rounded lg:rounded bg-light-blue text-white'
+                                    >
+                                    Register
+                                    </button>
+                                ) : (
+                                    <button className='w-full lg:px-10 py-2 lg:py-3 md:py-3 md:px-5 rounded-lg md:rounded lg:rounded bg-light-blue text-white' onClick={toggleForm}>
+                                    Register With Email
+                                    </button>
+                                )}
                                 <p className='text-grey'>OR</p>
                                 <button className='w-full lg:px-10 py-2 lg:py-3 md:py-3 md:px-5 rounded-lg md:rounded lg:rounded border-2 border-bright-orange text-bright-orange'>Register With Google</button>
                                 <button className='w-full lg:px-10 py-2 lg:py-3 md:py-3 md:px-5 rounded-lg md:rounded lg:rounded border-2 border-light-blue text-light-blue'>Register With Facebook</button>
