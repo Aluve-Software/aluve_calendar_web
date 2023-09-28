@@ -9,6 +9,8 @@ import SuccessfulReset from './pages/SuccessfulReset'
 import Registration from './pages/Registration'
 import Landing from './pages/Landing'
 import { Pages } from './pages'
+import Login from './pages/Login'
+
 
 function App() {
   const currentUser = useSelector(state => state.AuthReducer.currentUser)
@@ -31,10 +33,12 @@ function App() {
   return (
     <>
         <Routes>
+          <Route path="/login" element={<Login />} />
           <Route path="/" element={<Registration />} />
           <Route path="/reset" element={<ResetPassword />} />
           <Route path="/newpassword" element={<NewPassword />} />
           <Route path="/successreset" element={<SuccessfulReset />} />
+          <Route path="/registration" element={<Registration/>}/>       
           {/* <SuccessfulReset /> */}
           {/* <NewPassword /> */}
           {/* <ResetPassword /> */}

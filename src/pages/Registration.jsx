@@ -6,6 +6,10 @@ import timeImgBlack from '../assets/timeImgBlack.svg';
 import timeImgWhite from '../assets/timeImgWhite.svg';
 import eyeOpenIcon from '../assets/eyeOpenIcon.svg'
 import eyeShutIcon from '../assets/eyeShutIcon.svg'
+
+import GoogleSignInButton from '../components/GoogleSignInButton';
+GoogleSignInButton
+
 import '../index.css';
 
 export default function Registration() {
@@ -137,7 +141,7 @@ export default function Registration() {
                                     </button>
                                 )}
                                 <p className='text-grey'>OR</p>
-                                <button className='w-full lg:px-10 py-2 lg:py-3 md:py-3 md:px-5 rounded-lg md:rounded lg:rounded border-2 border-bright-orange text-bright-orange'>Register With Google</button>
+                                <GoogleSignInButton/>
                                 <button className='w-full lg:px-10 py-2 lg:py-3 md:py-3 md:px-5 rounded-lg md:rounded lg:rounded border-2 border-light-blue text-light-blue'>Register With Facebook</button>
                             </div>
 
