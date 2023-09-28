@@ -55,17 +55,18 @@ export default function ForgotPassword() {
 
 
                             {/* ADD functionality to redirect to sign in page */}
-                            <p className='text-sm py-8 lg:text-md md:text-md font-medium text-grey'>
+                            <p className='text-sm py-8 lg:text-lg md:text-md font-medium text-grey'>
                                 Don't have an account? <span className='font-bold text-light-blue hover:underline cursor-pointer' onClick={() => {}}>Register</span>
                             </p>
                         </div>
                         
                         {/* FIX: image scaling */}
-                        <div className='relative w-full lg:-top-1/2 md:-top-1/2 lg:-left-full md:-left-3/4   md:inset-full'>
+                        <div className='relative  lg:-top-1/2 md:-top-1/2 lg:-left-full  md:-left-3/4 inset-full  md:inset-full'>
                             <img
                                 src={confusedImg}
                                 alt="confused image black"
                                 className='hidden lg:block md:block'
+                                style={{ maxWidth: 'none', height: 'auto', width: '700px' }}
                             />
                         </div>
                     </div>
