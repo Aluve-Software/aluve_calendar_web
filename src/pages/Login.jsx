@@ -1,6 +1,8 @@
 import { useState } from 'react';
 // import backArrow from '../assets/backArrow.svg';
 import aluveLogo from '../assets/Aluve_monochrome_black 1.svg';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import Registration from './Registration';
 // import aluveLogoNoText from '../assets/aluveBlackNoText.svg'
 import timeImgBlack from '../assets/timeImgBlack.svg';
 import eyeOpenIcon from '../assets/eyeOpenIcon.svg'
@@ -90,7 +92,7 @@ export default function Login() {
 
                             {/* ADD functionality to redirect to sign in page */}
                             <p className='text-sm pb-10 lg:text-md md:text-md font-medium text-grey'>
-                                Don't have an account? <span className='font-bold text-light-blue hover:underline cursor-pointer' onClick={() => {}}>Register</span>
+                                Don't have an account? <span className='font-bold text-light-blue hover:underline cursor-pointer' > <Link to="/registration">Register</Link></span>
                             </p>
                         </div>
                         
