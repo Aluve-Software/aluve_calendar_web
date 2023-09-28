@@ -20,13 +20,15 @@ export default function ForgotPassword() {
                             <div className='display flex row justify-center lg:pb-10 md:pb-10'>
                                 {/* <img src={backArrow} className='pl-6 lg:pl-10 md:pl-10 mt-2 mb-2' onClick={() => window.history.back()} alt="back arrow" /> */}
                                 <img src={aluveLogo} alt="aluve logo text" className='w-1/2 lg:hidden md:hidden' />
-                            </div>
+                                <img 
+                                    src={confusedImg} 
+                                    alt="confused image" 
+                                    className='hidden lg:block md:block transform translate-x-1/2 lg:translate-x-1/3 md:translate-x-1/3'
+                                    style={{ maxWidth: '110%', width: '700px' }}
+                                />
                             
-                           
-                            <div className='hidden lg:block md:block lg:text-white font-space-mono text-center'>
-                                <p className='lg:text-lg md:text-sm font-medium'>Get organised with the</p>
-                                <span className='lg:text-2xl md:text-2xl font-extrabold'>Calendar App.</span>
-                            </div> 
+                            </div>
+
                         </div>
                     </div>
 
@@ -60,15 +62,7 @@ export default function ForgotPassword() {
                             </p>
                         </div>
                         
-                        {/* FIX: image scaling */}
-                        <div className='relative  lg:-top-1/2 md:-top-1/2 lg:-left-full  md:-left-3/4 inset-full  md:inset-full'>
-                            <img
-                                src={confusedImg}
-                                alt="confused image black"
-                                className='hidden lg:block md:block'
-                                style={{ maxWidth: 'none', height: 'auto', width: '700px' }}
-                            />
-                        </div>
+                        
                     </div>
                 </div>
             </div>
