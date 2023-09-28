@@ -8,8 +8,6 @@ export default function ResetPassword() {
     const [message, setMessage] = useState('');
     const [error, setError] = useState('')
 
-
-
     // submit functionality
     async function handleSubmit(e) {
         e.preventDefault();
