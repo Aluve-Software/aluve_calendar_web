@@ -1,5 +1,6 @@
 import aluveLogo from '../assets/Aluve_monochrome_black 1.svg';
 import confusedImg from '../assets/confusedImg.svg'
+import Button from '../components/Button';
 import '../index.css';
 
 export default function ForgotPassword() {
@@ -52,7 +53,13 @@ export default function ForgotPassword() {
                                 </div>
 
                                 {/* ADD Link to send verify user's email */}
-                                <button className='w-full font-medium lg:px-10 py-2 lg:py-3 md:py-3 md:px-5 rounded-lg md:rounded lg:rounded bg-light-blue text-white cursor-pointer'>Reset Password</button>
+                                <Button
+                                    label="Reset Password"
+                                    onClick={() => {
+                                    // Handle button click action
+                                    }}     
+                                    className=""
+                                />
                             </div>
                         </form>  
                        
