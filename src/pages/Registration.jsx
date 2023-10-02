@@ -6,9 +6,9 @@ import timeImgBlack from '../assets/timeImgBlack.svg';
 import timeImgWhite from '../assets/timeImgWhite.svg';
 import eyeOpenIcon from '../assets/eyeOpenIcon.svg'
 import eyeShutIcon from '../assets/eyeShutIcon.svg'
-
 import GoogleSignInButton from '../components/GoogleSignInButton';
-GoogleSignInButton
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+// GoogleSignInButton
 
 import '../index.css';
 
@@ -147,7 +147,7 @@ export default function Registration() {
 
                             {/* ADD functionality to redirect to sign in page */}
                             <p className='text-sm pb-10 lg:text-md md:text-md font-medium text-grey'>
-                                Already have an account? <span className='text-light-blue hover:underline cursor-pointer' onClick={() => {}}>Sign in.</span>
+                                Already have an account? <Link to="/login" className='text-light-blue hover:underline cursor-pointer'>Sign in.</Link>
                             </p>
                         </div>
                         
