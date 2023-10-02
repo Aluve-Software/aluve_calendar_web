@@ -1,7 +1,5 @@
 import React from 'react'
 
-// import { Link } from 'react-router-dom'
-
 function GoogleSignInButton() {
   return (
     <a href="/login/oauth2/authorization/google">

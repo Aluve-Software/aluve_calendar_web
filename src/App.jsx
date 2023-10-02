@@ -38,6 +38,7 @@ function App() {
           <Route path="/reset" element={<ResetPassword />} />
           <Route path="/newpassword" element={<NewPassword />} />
           <Route path="/successreset" element={<SuccessfulReset />} />
+          <Route path="/registration" element={<Registration/>}/>       
           {/* <SuccessfulReset /> */}
           {/* <NewPassword /> */}
           {/* <ResetPassword /> */}
