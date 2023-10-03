@@ -3,18 +3,67 @@
 @tailwind utilities;
 
 :root {
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  --lilac: #D6B9ED;
+  --dark-blue: #140E48;
+  --light-blue: #369FF7; 
+  --bright-orange: #FF5922 !important;
+  --grey: #313037;
+  --light-grey: #838295;
 }
 
+/* if you are struggling with applying this color in your jsx:
+ - ensure you have pulled this via the tailwind.config.js file OR
+ - add this to your tailwind.config.js file as follows: 
+    - // tailwind.config.js
+    module.exports = {
+      // ...
+      theme: {
+        extend: {
+          backgroundColor: {
+            'lilac': 'var(--lilac)',
+          },
+        },
+      },
 
+    OR
+  - use an inline style attribute as such: style={{ backgroundColor: 'var(--lilac)'
+*/
+.lilac {
+  color: var(--lilac);
+}
+
+.dark-blue {
+  color: var(--dark-blue);
+}
+
+.light-blue {
+  color: var(--light-blue);
+}
+
+.bright-orange {
+  color: var(--bright-orange);
+}
+
+.grey {
+  color: var(--grey);
+}
+
+.light-grey {
+  color: var(--light-grey);
+}
+
+.rounded-border {
+  border-radius: 10px 10px 10px 10px !important;
+}
+
+.space-mono {
+  font-family: 'Space Mono', monospace;
+}
 
 body {
-  margin: 0;
+  /* margin: 0;
   display: flex;
   min-width: 320px;
-  min-height: 100vh;
+  min-height: 100vh; */
 }
