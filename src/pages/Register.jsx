@@ -35,7 +35,7 @@ function Register() {
         // set configurations
         const configuration = {
             method: "POST",
-            url: "http://hwsrv-1097014.hostwindsdns.com:8080/signup",
+            url: "http://hwsrv-1097014.hostwindsdns.com:8080/calendar/signup",
             body: JSON.stringify(
                 {
                     name,    
@@ -50,7 +50,7 @@ function Register() {
         // make the API call
         axios(configuration)
         .then((response) => {console.log(response.json())})
-        .catch((error) => {console.log(error);})
+        .catch((error) => {console.log("something went wrong");})
     }
      
     return (

@@ -29,7 +29,7 @@ function Login() {
         // set configurations
         const configuration = {
             method: "POST",
-            url: "http://hwsrv-1097014.hostwindsdns.com:8080/login",
+            url: "http://hwsrv-1097014.hostwindsdns.com:8080/calendar/login",
             body: JSON.stringify(
                 {
                     name,    
@@ -44,7 +44,7 @@ function Login() {
         // make the API call
         axios(configuration)
         .then((response) => {console.log(response.json())})
-        .catch((error) => {console.log(error);})
+        .catch((error) => {console.log("Something went wrong");})
     }
  
      
