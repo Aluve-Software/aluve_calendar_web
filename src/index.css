@@ -35,7 +35,7 @@ html {
 
 body {
   min-height: 100vh;
-  background-color: rgb(255, 184, 30);
+  background-color: burlywood;
 }
 
 .App {
@@ -58,79 +58,17 @@ section {
   background-color: rgba(0, 0, 0, 0.4);
 }
 
-form {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  flex-grow: 1;
-  padding-bottom: 1rem;
+.text-black {
+    --tw-text-opacity: 1;
+    color: black;
 }
 
-a,
-a:visited {
-  color: #fff;
+text-black {
+  --tw-text-opacity: 1;
+  color: black;
 }
 
-input[type='text'],
-input[type='password'],
-button,
-textarea {
-  font-family: 'Nunito', sans-serif;
-  font-size: 22px;
-  padding: 0.25rem;
-  border-radius: 0.5rem;
-}
-
-label,
-button {
-  margin-top: 1rem;
-}
-
-button {
-  padding: 0.5rem;
-}
-
-.instructions {
-  font-size: 0.75rem;
-  border-radius: 0.5rem;
-  background: #000;
-  color: #fff;
-  padding: 0.25rem;
-  position: relative;
-  bottom: -10px;
-}
-
-.instructions>svg {
-  margin-right: 0.25rem;
-}
-
-.offscreen {
-  position: absolute;
-  left: -9999px;
-}
-
-.hide {
-  display: none;
-}
-
-.valid {
-  color: limegreen;
-  margin-left: 0.25rem;
-}
-
-.invalid {
+text-red {
   color: red;
-  margin-left: 0.25rem;
 }
-
-.errmsg {
-  background-color: lightpink;
-  color: firebrick;
-  font-weight: bold;
-  padding: 0.5rem;
-  margin-bottom: 0.5rem;
-}
-
-.line {
-  display: inline-block;
-}
+/*** ***/
