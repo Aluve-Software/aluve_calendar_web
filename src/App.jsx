@@ -5,6 +5,7 @@ import Register from "./pages/Register";
 import Dashboard from "./pages/Dashboard";
 import Home from "./pages/Home";
 import Header from "./components/Header";
+import Footer from "./components/Footer";
  
   
 function App() {
@@ -16,7 +17,9 @@ function App() {
           <Route path="/signup"  element={<Register/>} />
           <Route path="/dashboard"  element={<Dashboard/>} />
           <Route path="/login" element={<Login />} />
+          <Route path="/home" element={<Home />} />
       </Routes>
+      <Footer />
     </Router>
   );
 }

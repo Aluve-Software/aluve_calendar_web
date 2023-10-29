@@ -178,35 +178,6 @@ export default function Login() {
             </div>
           
         </div>
-        {/* Confirm Password */}
-        <div className="mx-5 relative">
-          <input
-            id="confirmPassword"
-            name="confirmPassword"
-            autoComplete="off"
-           type={(confirmPasswordEye === false) ? "password" : "text"}
-           className={`w-full rounded border border-gray-300 bg-inherit p-3 shadow shadow-gray-100 mt-2 focus:border-blue-500 text-black ${errors.confirmPassword && "focus:ring-red-500 border-red-500 text-black"}`}
-            placeholder="Enter Confirm password"
-            onPaste={(e) => {
-                e.preventDefault()
-                return false
-            }}
-            {...register("confirmPassword", {
-              required: "Confirm Password is required",
-              validate: (value) => 
-                  value === password || "Confirm Password do not match with entered password"
-              
-            })}
-          />
-          {errors.confirmPassword && <span className="text-red-500 text-sm">{errors.confirmPassword.message}</span>}
-          {/* Confirm Password Eye section */}
-          <div className="text-2xl bg-black absolute top-5 right-1">
-            {(confirmPasswordEye === false) ? <AiFillEyeInvisible onClick={handleConfirmPasswordClick}/> :  <AiFillEye onClick={handleConfirmPasswordClick}/>}
-                
-                
-            </div>
-          
-        </div>
         {/* Submit SEction */}
         <div className="flex items-center justfy-center mt-12">
             <button className="h-10 w-full rounded-lg font-bold bg-purple-900 text-4">Login</button>

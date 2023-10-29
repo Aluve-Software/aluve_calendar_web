@@ -4,3 +4,15 @@
   padding: 2rem;
 
 }
+
+@media (min-width: 640px){
+  .sm\:p-6 {
+    padding: 20rem;
+    padding-top: 20rem;
+    padding-right: 20rem;
+    padding-bottom: 20rem;
+    padding-left: 20rem;
+  }
+}
+
+

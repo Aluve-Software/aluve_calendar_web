@@ -43,7 +43,9 @@ const UserFacebookLogin = () => {
               fields="name,email,picture"
               scope="public_profile,user_friends"
               callback={responseFacebook}
-              icon="fa-facebook" />
+              icon="fa-facebook"
+              className="flex items-center justify-center w-full p-4 space-x-4 border rounded-md focus:ring-2 focus:ring-offset-1 dark:border-gray-400 focus:ring-violet-400" 
+            />
           }
           { login &&
             <Image src={picture} roundedCircle />
