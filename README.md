@@ -16,5 +16,8 @@
 ## Setting up a remote git repository
 ## git remote set-url origin https://github.com/Aluve-Software/aluve_calendar_web
 
-## pulling changes to local repository
+# pushing changes to remote repository
+## git push upstream <branch name>
+
+# pulling changes to local repository
 ## git pull
