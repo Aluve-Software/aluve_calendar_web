@@ -64,8 +64,8 @@ jobs:
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }} --legacy-peer-deps
         working-directory: ${{ env.BUILD_PATH }}
-      - name: Install facebbok and antd
-        run: ${{ steps.detect-package-manager.outputs.manager }} install antd react-facebook
+      - name: Install facebook, google and antd
+        run: ${{ steps.detect-package-manager.outputs.manager }} install antd react-facebook react-google
         working-directory: ${{ env.BUILD_PATH }}
       - name: Build with Astro
         run: |
