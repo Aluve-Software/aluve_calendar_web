@@ -1,30 +1,42 @@
-import React from "react";
+import * as React from "react";   
+// importing material UI components 
+import AppBar from "@mui/material/AppBar"; 
+import Toolbar from "@mui/material/Toolbar"; 
+import Typography from "@mui/material/Typography"; 
+import Button from "@mui/material/Button"; 
+import { useAuth0 } from '@auth0/auth0-react';
 import { Link } from "react-router-dom";
 
-const Header = () => {
-    const listHeader = ["Login", "signup", "Home"];
-
-    return (
-    <div className="bg-yellow-600 py-4">
-        <div className="container mx-auto">
-            <a href="#">
-                <img src="https://flowbite.com/docs/images/logo.svg" alt="Flowbite Logo" />
-                <span>Aluve Calendar</span>
-            </a>
-              {listHeader.map((item) => {
-                return (
-                  <div className="float-right">
-                    <Link to={`/${item}`} key={item}>
-                      <div className="px-4 float-right">
-                        <p className="text-white capitalize float-right">{item}</p>
-                      </div>
-                    </Link>
-                  </div>
-                );
-              })}
-        </div>
-    </div>
-  );
-};
-
-export default Header;
+const styles = {
+  color: 'white'
+}
+  
+export default function Header() {
+    const { isAuthenticated, user } = useAuth0();  
+    return ( 
+      <AppBar position="static"> 
+        <Toolbar>   
+          {/* The Typography component applies  
+           default font weights and sizes */} 
+  
+          <Typography variant="h6" 
+            component="div" sx={{ flexGrow: 1 }}> 
+            Aluve Calendar Software 
+          </Typography>
+          { !isAuthenticated ? (
+              <Link to="/login"><Button style={styles}>Login</Button></Link>
+          ) : (
+            <>
+                <Link to="/profile"><Button style={styles}>User Profile</Button> </Link>
+                <Link to="/logout"><Button style={styles}>Logout</Button> </Link>
+                <img 
+                    src={user.picture}
+                    className="rounded-sm"
+                    alt={user.name}
+                />
+            </>
+          )}
+        </Toolbar> 
+      </AppBar> 
+  ); 
+}

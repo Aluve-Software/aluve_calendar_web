@@ -1,27 +1,30 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Login from "./pages/Login";
-import Register from "./pages/Register";
-import Dashboard from "./pages/Dashboard";
-import Home from "./pages/Home";
+import { useAuth0 } from "@auth0/auth0-react";
+import React from "react";
+import { Route, Routes, BrowserRouter } from "react-router-dom";
+import { ProtectedRoute } from "./components/ProtectedRoute";
+import { LandingPage } from "./pages/LandingPage";
+import ProfilePage  from "./pages/ProfilePage";
+import LogoutButton from "./components/LogoutButton";
 import Header from "./components/Header";
+import LoginButton from "./components/LoginButton";
 import Footer from "./components/Footer";
- 
-  
-function App() {
+
+const App = () => {
+
   return (
-    <Router>
-      <Header />
-      <Routes>
-          <Route exact path="/"  element={<Home/>} />
-          <Route path="/signup"  element={<Register/>} />
-          <Route path="/dashboard"  element={<Dashboard/>} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/home" element={<Home />} />
-      </Routes>
-      <Footer />
-    </Router>
+    <BrowserRouter>
+      <div className="App">
+        <Header />
+        <Routes>
+          <Route exact path="/" element={<LandingPage />} />
+          <Route exact path="/profile" element={<ProfilePage/>} />
+          <Route exact path="/login" element={<LoginButton/>} />
+          <Route exact path="/logout" element={<LogoutButton/>} />
+          {/*<ProtectedRoute path="/user" component={UserPage} /> */}
+        </Routes>
+        <Footer />
+      </div>
+    </BrowserRouter>
   );
-}
-  
+};
 export default App;
